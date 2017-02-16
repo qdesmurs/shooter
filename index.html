@@ -15,8 +15,13 @@
         var pigeon = document.createElement("div");
         pigeon.className = "pigeon";
         tablo.appendChild(pigeon);
-        pigeon.style.top = Math.floor(Math.random()*tablo.clientHeight )+ "px";
-        pigeon.style.left = Math.floor(Math.random()*tablo.clientWidth )+ "px";
 
+        setInterval(function(){
+            pigeon.style.top = Math.floor(Math.random()*tablo.clientHeight -50 )+ "px";
+            pigeon.style.left = Math.floor(Math.random()*tablo.clientWidth -50)+ "px";
+        }, 1000);
+        pigeon.addEventListener("click", function(){
+            pigeon.style.display = "none";
+        });
     </script>
 </html>
