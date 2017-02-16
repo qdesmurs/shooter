@@ -13,22 +13,20 @@
     <script>
         var tablo = document.getElementById("board");
 
-
-
         setInterval(function(){
             var pigeon = document.createElement("div");
-            pigeon.className = "pigeon";
-            tablo.appendChild(pigeon);
-            pigeon.addEventListener("click", function(){
-                board.removeChild(pigeon);
+                pigeon.className = "pigeon";
+                tablo.appendChild(pigeon);
+                pigeon.addEventListener("click", function(){
+                    board.removeChild(pigeon);
             });
         }, 3000);
         setInterval(function(){
             var pigeons = document.getElementsByClassName("pigeon");
             for (var i = 0; i < pigeons.length; i++) {
-            pigeons[i].style.top = Math.floor(Math.random()*tablo.clientHeight -25 )+ "px";
-            pigeons[i].style.left = Math.floor(Math.random()*tablo.clientWidth -100)+ "px";
-    };
-}, 1000);
+                pigeons[i].style.top = Math.floor(Math.random()*tablo.clientHeight -100)+ "px";
+                pigeons[i].style.left = Math.floor(Math.random()*tablo.clientWidth -100)+ "px";
+            };
+        }, 1000);
     </script>
 </html>

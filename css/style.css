@@ -2,13 +2,14 @@ body {
     width: 100%;
     height: 100%;
     margin: 0;
-    position: absolute;
 
 }
 #board {
+    background-size: cover;
+    position: relative;
     width: 100vw;
     height: 100vh;
-    background-color: blue;
+    background-image: url(http://www.lepoint.fr/content/system/media/1/200809/22221_une-ecoute-elysee.jpg);
     cursor: url(../img/viseur02.png)50 50,pointer;
 }
 .pigeon {
@@ -16,5 +17,6 @@ body {
     height: 100px;
     background-image: url(../img/pigeon.png) ;
     border-radius: 50%;
-    position: relative;
+    position: absolute;
+    transition: top 1s, left 1s;
 }
