@@ -12,23 +12,23 @@
     </body>
     <script>
         var tablo = document.getElementById("board");
-        var pigeon = document.createElement("div");
-        pigeon.className = "pigeon";
-        tablo.appendChild(pigeon);
 
-        setInterval(function(){
-            var pigeons = getElementsByClassName("pigeon");
-            pigeon.style.top = Math.floor(Math.random()*tablo.clientHeight -25 )+ "px";
-            pigeon.style.left = Math.floor(Math.random()*tablo.clientWidth -100)+ "px";
-        }, 1000);
-        pigeon.addEventListener("click", function(){
-            board.removeChild(pigeon);
-        });
+
 
         setInterval(function(){
             var pigeon = document.createElement("div");
             pigeon.className = "pigeon";
             tablo.appendChild(pigeon);
+            pigeon.addEventListener("click", function(){
+                board.removeChild(pigeon);
+            });
         }, 3000);
+        setInterval(function(){
+            var pigeons = document.getElementsByClassName("pigeon");
+            for (var i = 0; i < pigeons.length; i++) {
+            pigeons[i].style.top = Math.floor(Math.random()*tablo.clientHeight -25 )+ "px";
+            pigeons[i].style.left = Math.floor(Math.random()*tablo.clientWidth -100)+ "px";
+    };
+}, 1000);
     </script>
 </html>
