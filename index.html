@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="./css/style.css">
-        <title></title>
+        <title>Shooter</title>
     </head>
     <body>
         <div id="board">
@@ -15,5 +15,8 @@
         var pigeon = document.createElement("div");
         pigeon.className = "pigeon";
         tablo.appendChild(pigeon);
+        pigeon.style.top = Math.floor(Math.random()*tablo.clientHeight )+ "px";
+        pigeon.style.left = Math.floor(Math.random()*tablo.clientWidth )+ "px";
+
     </script>
 </html>
