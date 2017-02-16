@@ -17,11 +17,18 @@
         tablo.appendChild(pigeon);
 
         setInterval(function(){
-            pigeon.style.top = Math.floor(Math.random()*tablo.clientHeight -100 )+ "px";
+            var pigeons = getElementsByClassName("pigeon");
+            pigeon.style.top = Math.floor(Math.random()*tablo.clientHeight -25 )+ "px";
             pigeon.style.left = Math.floor(Math.random()*tablo.clientWidth -100)+ "px";
         }, 1000);
         pigeon.addEventListener("click", function(){
             board.removeChild(pigeon);
         });
+
+        setInterval(function(){
+            var pigeon = document.createElement("div");
+            pigeon.className = "pigeon";
+            tablo.appendChild(pigeon);
+        }, 3000);
     </script>
 </html>
